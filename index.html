@@ -15,7 +15,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#analytics">Analytics</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li> 
                 <li><a href="#profile">Profile</a></li>
                 <li><a href="#logout">Logout</a></li>
             </ul>
@@ -37,20 +37,31 @@
 
             <!-- Analytics Content -->
             <section class="content" id="analytics">
-                <h2>Data Penjualan Tahunan</h2>
+                <h2>Data Penjualan (Januari - Desember)</h2>
                 <canvas id="salesChart" width="400" height="200"></canvas>
                 
-                <h2>Data Total Pendapatan Penjualan Buku</h2>
+                <h2>Data Pendapatan Penjualan Buku</h2>
                 <table class="sales-table" id="sales-table">
                     <thead>
                         <tr>
-                            <th>Tahun</th>
-                            <th>Total Penjualan</th>
-                            <th>Total Pendapatan</th>
+                            <th>Bulan</th>
+                            <th>Penjualan</th>
+                            <th>Pendapatan</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>2024</td><td>2350</td><td>Rp 235.000.000</td></tr>
+                        <tr><td>Januari</td><td>120</td><td>Rp 12.000.000</td></tr>
+                        <tr><td>Februari</td><td>150</td><td>Rp 15.000.000</td></tr>
+                        <tr><td>Maret</td><td>180</td><td>Rp 18.000.000</td></tr>
+                        <tr><td>April</td><td>200</td><td>Rp 20.000.000</td></tr>
+                        <tr><td>Mei</td><td>160</td><td>Rp 16.000.000</td></tr>
+                        <tr><td>Juni</td><td>140</td><td>Rp 14.000.000</td></tr>
+                        <tr><td>Juli</td><td>210</td><td>Rp 21.000.000</td></tr>
+                        <tr><td>Agustus</td><td>190</td><td>Rp 19.000.000</td></tr>
+                        <tr><td>September</td><td>230</td><td>Rp 23.000.000</td></tr>
+                        <tr><td>Oktober</td><td>250</td><td>Rp 25.000.000</td></tr>
+                        <tr><td>November</td><td>220</td><td>Rp 22.000.000</td></tr>
+                        <tr><td>Desember</td><td>300</td><td>Rp 30.000.000</td></tr>
                     </tbody>
                 </table>
             </section>
@@ -72,10 +83,10 @@
         var salesChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['2024'],
+                labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
                 datasets: [{
-                    label: 'Total Penjualan',
-                    data: [2350],
+                    label: 'Penjualan',
+                    data: [120, 150, 180, 200, 160, 140, 210, 190, 230, 250, 220, 300],
                     backgroundColor: 'rgba(75, 192, 192, 0.6)',
                     borderColor: 'rgba(75, 192, 192, 1)',
                     borderWidth: 1
